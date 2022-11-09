@@ -1,0 +1,64 @@
+mutation updateAnyUser($userData: UpdateUserInput!){
+  updateAnyUser(updateUser: $userData){
+    id
+    firstName
+    lastName
+    phone
+    bio
+    pronouns
+    profileAvailability
+  }
+}
+
+query getUserById($id: String!) {
+  getUserById(id: $id) {
+    id
+    lastName
+    firstName
+    phone
+    bio
+    email
+    pronouns
+    role 
+    birthday
+    bannerPicture
+    profileAvailability
+  }
+}
+
+query GetUsersByRole($role: String!) {
+  getUsersByRole(role: $role) {
+    data {
+      id
+      firstName
+      lastName
+    }
+    pageInfo {
+      total
+    }
+  }
+}
+
+query GetChatUsers{
+  getAllPublicUsers {
+    data {
+      id
+      email
+      lastName
+      firstName
+    }
+    pageInfo {
+      total
+    }
+  }
+}
+
+
+query GetChatUser($id: String!) {
+  getPublicUserById(id: $id) {
+    id
+    firstName
+    lastName
+    email
+  }
+}

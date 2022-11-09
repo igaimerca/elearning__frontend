@@ -1,0 +1,36 @@
+query GetSchoolById($schoolId: String!) {
+  school(id: $schoolId) {
+    id
+    name
+    createdAt
+    updatedAt
+    address {
+      id
+      zipCode
+      country
+      city
+    }
+  }
+}
+
+query GetStudentsBySchoolId($schoolId: String!) {
+  getStudentsBySchoolId(schoolId: $schoolId) {
+    data {
+      id
+      profilePicture
+      lastName
+      firstName
+      schoolId
+      birthday
+      profilePicture
+      pronouns
+      email
+      
+    }
+    pageInfo {
+      total
+      skip
+      limit
+    }
+  }
+}

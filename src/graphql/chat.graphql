@@ -1,0 +1,48 @@
+mutation CreateNewDirectMessage($message: CreateMessageInput!) {
+  sendMessage(createMessageInput: $message) {
+    id
+    text
+    createdAt
+    updatedAt
+  }
+}
+
+
+
+query GetDirectMessages($userId: String!) {
+  getMessagesBetween(userId: $userId){
+    id
+    text
+    filePath
+    createdAt
+    updatedAt
+    fromId
+    toId
+    from {
+      id
+      lastName
+      firstName
+      profilePicture
+    }
+    to {
+      id
+      firstName
+      lastName
+      profilePicture
+    }
+  }
+}
+
+subscription NewMessage {
+  messageAdded {
+    id
+    text
+    createdAt
+    updatedAt
+    to {
+      id
+      lastName
+      firstName
+    }
+  }
+}

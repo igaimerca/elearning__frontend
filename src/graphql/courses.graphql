@@ -1,0 +1,3 @@
+query CountCoursesInSchool($schoolId: String!) {
+  getCountCoursesOfSchool(schoolId: $schoolId)
+}

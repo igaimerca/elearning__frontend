@@ -1,0 +1,20 @@
+query GetCoursesByTeacher {
+  courses {
+    pageInfo {
+      total
+      limit
+    }
+    data {
+      id
+      name
+     courseCode
+      description
+      createdAt
+      updatedAt
+    }
+  }
+}
+
+query CountTeachersInSchool($schoolId: String!) {
+  countTeachersInSchool(schoolId: $schoolId) 
+}

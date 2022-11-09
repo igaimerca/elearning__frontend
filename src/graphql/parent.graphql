@@ -1,0 +1,22 @@
+query getParentTodoAssignment{
+  getParentTodoAssignment{
+    data{
+      id
+      courseId
+      course{
+        id
+        name
+      }
+      title
+      description
+      due
+      marks
+      visible
+    },
+    pageInfo{
+      total
+      limit
+      skip
+    }
+  }
+}

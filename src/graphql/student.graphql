@@ -1,0 +1,84 @@
+query GetStudentCourses {
+  currentUser {
+    id
+    lastName
+    firstName
+    studentCourses {
+      course {
+        id
+        name
+        courseCode
+        picture
+        description
+        teacher {
+          id
+          lastName
+          firstName
+          profilePicture
+        }
+      }
+    }
+  } 
+}
+
+
+query GetStudentTotolCompletedAssginements{
+  getStudentCompletedAssignments {
+    pageInfo {
+      total
+    }
+  }
+}
+
+query GetStudentTotalOverDueAssignments{
+  getStudentOverDueAssignments {
+    pageInfo {
+      total
+    }
+  }
+}
+
+query GetStudentTodoAssignments{
+  getStudentTodoAssignments {
+    pageInfo {
+      total
+    }
+  }
+}
+
+
+query GetStudentAnnouncements($limit: Float){
+  getAnnouncements(limit: $limit) {
+    data {
+      id
+      type
+      title
+      description
+      createdAt
+      updatedAt
+    }
+    pageInfo {
+      total
+      skip
+    }
+  }
+}
+
+
+
+query GetSchools($limit: Float) {
+  schools(limit: $limit) {
+    data {
+      id
+      name
+    }
+    pageInfo {
+      total
+    }
+  }
+}
+
+
+query CountStudentsInSchool($schoolId:String!){
+  countStudentsInSchool(schoolId: $schoolId)
+}

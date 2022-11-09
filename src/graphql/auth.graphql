@@ -1,0 +1,46 @@
+mutation loginMutation($loginData:LoginAuthInput!) {
+  login(loginData:$loginData){
+    user{
+       id
+      role
+    }
+    accessToken
+    refreshToken
+  }
+}
+
+
+query currentUser {
+  currentUser {
+     id
+    email
+    bio
+    birthday
+    firstName
+    lastName
+    bannerPicture
+    pronouns
+    profilePicture
+    profileAvailability
+    tfaEnabled
+    interests
+    confidential
+    role
+    createdAt
+    updatedAt
+    schoolId
+  }
+}
+
+
+
+mutation RefreshToken($data:RefreshTokenInput!) {
+  refreshToken(refreshTokenInput: $data){
+    accessToken
+    refreshToken
+    user{
+      role
+      id
+    }
+  }
+}

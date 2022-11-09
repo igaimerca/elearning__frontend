@@ -1,0 +1,23 @@
+mutation createCalendarEventMutation($calendarData: CreateCalendarEventInput!){
+  createCalendarEvent(createCalendarEventInput: $calendarData){
+    description
+    endDate
+    startDate
+  }
+}
+
+query GetCalendarEvents($limit:Float){
+  calendarevents(limit:$limit) {
+    data {
+      id
+      title
+      description
+      startDate
+      endDate
+      recurring
+    }
+    pageInfo {
+      limit
+    }
+  }
+}

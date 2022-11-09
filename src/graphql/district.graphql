@@ -1,0 +1,35 @@
+query getDistricts {
+ 	districts{
+    data{
+      id
+      name
+      addressId
+      address{
+        id
+        country
+        state
+        city
+        street
+        number
+        zipCode
+      }
+      about
+      banner
+      createdAt
+      updatedAt
+      schools{
+        id
+        name
+      }
+      users{
+        id
+        firstName
+        lastName
+        email
+        password
+        phone
+        birthday
+      }
+    }
+  } 
+}

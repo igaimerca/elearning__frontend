@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    /* We shall use this once we have dark mode designs implemented 
+        I left them here intentionally  
+    */
+    :root {
+        --color-text-base: #fff;
+        --color-fill: #667EEA;
+        --color-fill-accent: #C9D2F8;
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none!important
+  }
+
+.check-box {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    cursor: pointer;
+}
+
+.check-box {
+    border: 3px solid #9BA9B8;
+    border-radius: 5px;
+}
+
+.check-box:checked {
+    background-color: #8295EE;
+    border-color: #8295EE;
+    background-image: url('/assets/icons/check.svg');
+    background-position: center;
+}
+
+.translate-matrix-orange{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, orange 50%, orange 100%);
+}
+
+.translate-matrix-red{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #DD0E31 50%, #DD0E31 100%);
+}
+
+.translate-matrix-green{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #38E035 50%, #38E035 100%);
+}
+.translate-matrix-blue{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #576BC7 50%, #576BC7 100%);
+}
+
+.translate-matrix-pink{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #C73AC2 50%, #C73AC2 100%);
+}
+
+.translate-matrix-cyan{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #0D9F9F 50%, #0D9F9F 100%);
+}
+
+.translate-matrix-fuschia{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #EF5DA8 50%, #EF5DA8 100%);
+}
+
+.translate-matrix-purple{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #8059D1 50%, #8059D1 100%);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #BFBFBF;
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #595959;
+  }
