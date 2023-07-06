@@ -1,1 +1,1 @@
-###### Grade Arc Web App
+###### Web App
